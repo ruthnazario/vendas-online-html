@@ -1,463 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="description"
-        content="TechStore - Vendas online de eletrônicos."
-    >
+      name="description"
+      content="TechStore - Vendas online de eletrônicos."
+    />
 
     <title>TechStore | Vendas Online</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-
-<body>
-
-
+  <body>
     <!-- CABEÇALHO DO SITE -->
 
     <header class="header">
+      <div class="container header-content">
+        <!-- LOGO -->
 
-        <div class="container header-content">
+        <a href="index.html" class="logo"> Tech<span>Store</span> </a>
 
+        <!-- MENU DE NAVEGAÇÃO -->
 
-            <!-- LOGO -->
+        <nav aria-label="Navegação principal">
+          <ul class="menu">
+            <li>
+              <a href="index.html" class="active"> Início </a>
+            </li>
 
-            <a
-                href="index.html"
-                class="logo"
-            >
-                Tech<span>Store</span>
-            </a>
+            <li>
+              <a href="produtos.html"> Produtos </a>
+            </li>
 
-
-            <!-- MENU DE NAVEGAÇÃO -->
-
-            <nav aria-label="Navegação principal">
-
-                <ul class="menu">
-
-                    <li>
-                        <a
-                            href="index.html"
-                            class="active"
-                        >
-                            Início
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="produtos.html">
-                            Produtos
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contato">
-                            Fale Conosco
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
+            <li>
+              <a href="#contato"> Fale Conosco </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
 
     <!-- CONTEÚDO PRINCIPAL -->
 
     <main>
+      <!-- BANNER PRINCIPAL -->
 
+      <section class="hero">
+        <div class="container hero-content">
+          <!-- TEXTO DO BANNER -->
 
-        <!-- BANNER PRINCIPAL -->
+          <div class="hero-text">
+            <p class="tag">VENDAS ONLINE</p>
 
-        <section class="hero">
+            <h1>Tecnologia que combina com você.</h1>
 
-            <div class="container hero-content">
+            <p>
+              Encontre eletrônicos para estudo, trabalho, entretenimento e para
+              deixar seu dia a dia ainda mais conectado.
+            </p>
 
+            <!-- BOTÕES -->
 
-                <!-- TEXTO DO BANNER -->
+            <div class="buttons">
+              <a href="produtos.html" class="button button-primary">
+                Ver produtos
+              </a>
 
-                <div class="hero-text">
-
-                    <p class="tag">
-                        VENDAS ONLINE
-                    </p>
-
-                    <h1>
-                        Tecnologia que combina com você.
-                    </h1>
-
-                    <p>
-                        Encontre eletrônicos para estudo,
-                        trabalho, entretenimento e para
-                        deixar seu dia a dia ainda mais conectado.
-                    </p>
-
-
-                    <!-- BOTÕES -->
-
-                    <div class="buttons">
-
-                        <a
-                            href="produtos.html"
-                            class="button button-primary"
-                        >
-                            Ver produtos
-                        </a>
-
-                        <a
-                            href="#destaques"
-                            class="button button-secondary"
-                        >
-                            Conheça a loja
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- IMAGEM PRINCIPAL -->
-
-                <div class="hero-image">
-
-                    <img
-                        src="imagens/notebook.jpg"
-                        alt="Notebook em destaque na TechStore"
-                    >
-
-                </div>
-
+              <a href="#destaques" class="button button-secondary">
+                Conheça a loja
+              </a>
             </div>
+          </div>
 
-        </section>
+          <!-- IMAGEM PRINCIPAL -->
 
+          <div class="hero-image">
+            <img
+              src="imagens/notebook.jpg"
+              alt="Notebook em destaque na TechStore"
+            />
+          </div>
+        </div>
+      </section>
 
-        <!-- PRODUTOS EM DESTAQUE -->
+      <!-- PRODUTOS EM DESTAQUE -->
 
-        <section
-            id="destaques"
-            class="section"
-        >
+      <section id="destaques" class="section">
+        <div class="container">
+          <div class="section-title">
+            <p class="tag">DESTAQUES</p>
 
-            <div class="container">
+            <h2>Escolha sua próxima tecnologia</h2>
 
+            <p>Confira alguns dos produtos disponíveis em nossa loja.</p>
+          </div>
 
-                <div class="section-title">
+          <!-- CARDS DOS PRODUTOS -->
 
-                    <p class="tag">
-                        DESTAQUES
-                    </p>
+          <div class="products-grid">
+            <!-- PRODUTO 1 -->
 
-                    <h2>
-                        Escolha sua próxima tecnologia
-                    </h2>
+            <article class="product-card">
+              <img src="imagens/notebook.jpg" alt="Notebook moderno" />
 
-                    <p>
-                        Confira alguns dos produtos disponíveis
-                        em nossa loja.
-                    </p>
+              <div class="product-content">
+                <h3>MacBook Neo</h3>
 
-                </div>
+                <p>Ideal para estudos, trabalho e produtividade.</p>
 
+                <strong> R$ 5.499,00 </strong>
 
-                <!-- CARDS DOS PRODUTOS -->
+                <a href="produtos.html"> Ver produto </a>
+              </div>
+            </article>
 
-                <div class="products-grid">
+            <!-- PRODUTO 2 -->
 
+            <article class="product-card">
+              <img src="imagens/smartphone.jpg" alt="Smartphone moderno" />
 
-                    <!-- PRODUTO 1 -->
+              <div class="product-content">
+                <h3>iPhone 17 pro</h3>
 
-                    <article class="product-card">
+                <p>Tecnologia, desempenho e praticidade para o seu dia.</p>
 
-                        <img
-                            src="imagens/notebook.jpg"
-                            alt="Notebook moderno"
-                        >
+                <strong> R$ 7.899,00 </strong>
 
-                        <div class="product-content">
+                <a href="produtos.html"> Ver produto </a>
+              </div>
+            </article>
 
-                            <h3>
-                                MacBook Neo
-                            </h3>
+            <!-- PRODUTO 3 -->
 
-                            <p>
-                                Ideal para estudos, trabalho
-                                e produtividade.
-                            </p>
+            <article class="product-card">
+              <img src="imagens/fone.jpg" alt="Fone de ouvido moderno" />
 
-                            <strong>
-                                R$ 5.499,00
-                            </strong>
+              <div class="product-content">
+                <h3>AirPods 4</h3>
 
-                            <a href="produtos.html">
-                                Ver produto
-                            </a>
+                <p>Som de qualidade para músicas, vídeos e chamadas.</p>
 
-                        </div>
+                <strong> R$ 1.399,00 </strong>
 
-                    </article>
+                <a href="produtos.html"> Ver produto </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
+      <!-- LISTA DE BENEFÍCIOS -->
 
-                    <!-- PRODUTO 2 -->
+      <section class="section benefits">
+        <div class="container two-columns">
+          <div>
+            <p class="tag">POR QUE A TECHSTORE?</p>
 
-                    <article class="product-card">
+            <h2>Uma experiência simples e prática.</h2>
 
-                        <img
-                            src="imagens/smartphone.jpg"
-                            alt="Smartphone moderno"
-                        >
+            <p>
+              Nossa loja foi pensada para oferecer uma experiência simples,
+              organizada e fácil de navegar.
+            </p>
+          </div>
 
-                        <div class="product-content">
+          <div>
+            <h3>Confira nossos benefícios</h3>
 
-                            <h3>
-                                iPhone 17 pro
-                            </h3>
+            <ul class="list">
+              <li>Produtos de qualidade</li>
 
-                            <p>
-                                Tecnologia, desempenho e
-                                praticidade para o seu dia.
-                            </p>
+              <li>Variedade de eletrônicos</li>
 
-                            <strong>
-                                R$ 7.899,00
-                            </strong>
+              <li>Compra rápida e prática</li>
 
-                            <a href="produtos.html">
-                                Ver produto
-                            </a>
+              <li>Navegação simples</li>
 
-                        </div>
+              <li>Atendimento ao cliente</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-                    </article>
+      <!-- VÍDEO -->
 
+      <section class="section video-section">
+        <div class="container">
+          <div class="section-title">
+            <p class="tag">TECNOLOGIA</p>
 
-                    <!-- PRODUTO 3 -->
+            <h2>Conheça o universo da tecnologia</h2>
 
-                    <article class="product-card">
+            <p>Confira o vídeo abaixo.</p>
+          </div>
 
-                        <img
-                            src="imagens/fone.jpg"
-                            alt="Fone de ouvido moderno"
-                        >
+          <div class="video-container">
+            <video controls>
+              <source src="videos/video-tecnologia.mp4" type="video/mp4" />
 
-                        <div class="product-content">
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
+          </div>
+        </div>
+      </section>
 
-                            <h3>
-                                AirPods 4
-                            </h3>
+      <!-- FALE CONOSCO -->
 
-                            <p>
-                                Som de qualidade para músicas,
-                                vídeos e chamadas. 
-                            </p>
+      <section id="contato" class="section contact-section">
+        <div class="container contact-content">
+          <div>
+            <p class="tag">FALE CONOSCO</p>
 
-                            <strong>
-                                R$ 1.399,00
-                            </strong>
+            <h2>Estamos aqui para ajudar.</h2>
 
-                            <a href="produtos.html">
-                                Ver produto
-                            </a>
+            <p>
+              Entre em contato conosco para tirar dúvidas sobre nossos produtos.
+            </p>
 
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- LISTA DE BENEFÍCIOS -->
-
-        <section class="section benefits">
-
-            <div class="container two-columns">
-
-
-                <div>
-
-                    <p class="tag">
-                        POR QUE A TECHSTORE?
-                    </p>
-
-                    <h2>
-                        Uma experiência simples e prática.
-                    </h2>
-
-                    <p>
-                        Nossa loja foi pensada para oferecer
-                        uma experiência simples, organizada
-                        e fácil de navegar.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Confira nossos benefícios
-                    </h3>
-
-                    <ul class="list">
-
-                        <li>
-                            Produtos de qualidade
-                        </li>
-
-                        <li>
-                            Variedade de eletrônicos
-                        </li>
-
-                        <li>
-                            Compra rápida e prática
-                        </li>
-
-                        <li>
-                            Navegação simples
-                        </li>
-
-                        <li>
-                            Atendimento ao cliente
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- VÍDEO -->
-
-        <section class="section video-section">
-
-            <div class="container">
-
-
-                <div class="section-title">
-
-                    <p class="tag">
-                        TECNOLOGIA
-                    </p>
-
-                    <h2>
-                        Conheça o universo da tecnologia
-                    </h2>
-
-                    <p>
-                        Confira o vídeo abaixo.
-                    </p>
-
-                </div>
-
-
-                <div class="video-container">
-
-                    <video controls>
-
-                        <source
-                            src="videos/video-tecnologia.mp4"
-                            type="video/mp4"
-                        >
-
-                        Seu navegador não suporta
-                        a reprodução de vídeo.
-
-                    </video>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FALE CONOSCO -->
-
-        <section
-            id="contato"
-            class="section contact-section"
-        >
-
-            <div class="container contact-content">
-
-
-                <div>
-
-                    <p class="tag">
-                        FALE CONOSCO
-                    </p>
-
-                    <h2>
-                        Estamos aqui para ajudar.
-                    </h2>
-
-                    <p>
-                        Entre em contato conosco para tirar
-                        dúvidas sobre nossos produtos.
-                    </p>
-
-                    <p>
-                        O formulário de contato será desenvolvido
-                        na próxima aula.
-                    </p>
-
-                </div>
-
-
-                <a
-                    href="produtos.html"
-                    class="button button-primary"
-                >
-                    Ver produtos
-                </a>
-
-            </div>
-
-        </section>
-
+            <p>Precisa de ajuda? Acesse nosso formulário
+                e envie sua mensagem para a equipe TechStore.
+            </p>
+          </div>
+          <a href="contato.html" class="button button-primary">
+            Fale Conosco
+          </a>
+        </div>
+      </section>
     </main>
-
 
     <!-- RODAPÉ -->
 
     <footer class="footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 TechStore - Projeto acadêmico de Vendas Online.</p>
 
-        <div class="container footer-content">
-
-            <p>
-                &copy; 2026 TechStore -
-                Projeto acadêmico de Vendas Online.
-            </p>
-
-            <a href="index.html">
-                Voltar ao início
-            </a>
-
-        </div>
-
+        <a href="index.html"> Voltar ao início </a>
+      </div>
     </footer>
-
-
-</body>
-
+  </body>
 </html>

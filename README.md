@@ -10,9 +10,9 @@ A **TechStore** é uma proposta de loja virtual especializada em **eletrônicos*
 
 O projeto tem como objetivo aplicar, de forma prática e progressiva, os conhecimentos adquiridos durante as aulas, começando pela construção da estrutura HTML e evoluindo posteriormente para novas páginas, recursos e funcionalidades.
 
-Nesta primeira etapa, o site foi desenvolvido de forma **estática**, apresentando a estrutura visual e a navegação básica de uma loja virtual.
+Nesta etapa, o site foi ampliado com uma **terceira página**, destinada ao contato com o cliente, contendo um **formulário HTML5** com diferentes tipos de campos e recursos de validação.
 
-> 🚧 O projeto continuará sendo desenvolvido ao longo das próximas aulas.
+> 🚧 O projeto continuará sendo desenvolvido e aprimorado ao longo das próximas aulas.
 
 ---
 
@@ -20,24 +20,52 @@ Nesta primeira etapa, o site foi desenvolvido de forma **estática**, apresentan
 
 O objetivo do projeto é desenvolver um site de **Vendas Online** com uma experiência simples, organizada e intuitiva para apresentação de produtos eletrônicos.
 
-A proposta inicial contempla elementos comuns em grandes plataformas de comércio eletrônico, como:
+A proposta contempla elementos comuns em plataformas de comércio eletrônico, como:
 
 * Navegação entre páginas;
 * Catálogo de produtos;
 * Apresentação de preços;
 * Área destinada ao carrinho;
 * Área de contato;
+* Formulário HTML5;
 * Imagens dos produtos;
 * Conteúdo multimídia;
 * Estrutura preparada para futuras funcionalidades.
 
 ---
 
-## 🖥️ Etapa atual — Aula 1
+# 📚 Etapa atual — Aula 2
 
-Nesta primeira etapa foram desenvolvidas **duas páginas HTML**:
+Nesta etapa, o projeto foi ampliado com a criação de uma **terceira página dedicada ao formulário de contato**.
 
-### 🏠 Página inicial
+A página **Fale Conosco** foi desenvolvida utilizando recursos do HTML5, permitindo praticar diferentes tipos de campos, controles de formulário e validações.
+
+### 🆕 Novos recursos implementados
+
+* ✅ Terceira página do projeto;
+* ✅ Página de contato;
+* ✅ Formulário HTML5;
+* ✅ Organização dos campos em tabela;
+* ✅ Campos de texto;
+* ✅ Campo de e-mail;
+* ✅ Campo de telefone;
+* ✅ Campo de data;
+* ✅ Campo numérico;
+* ✅ Campo `select`;
+* ✅ Radio buttons;
+* ✅ Checkboxes;
+* ✅ Textarea;
+* ✅ Campos obrigatórios;
+* ✅ Validação utilizando atributos HTML5;
+* ✅ Limitação de quantidade de caracteres;
+* ✅ Navegação entre as três páginas;
+* ✅ Link **Fale Conosco** na navegação;
+* ✅ Link para retorno à página inicial;
+* ✅ Link para acesso à página de produtos.
+
+---
+
+## 🏠 Página inicial
 
 Arquivo:
 
@@ -55,11 +83,13 @@ A página inicial apresenta:
 * Imagens;
 * Lista de benefícios;
 * Vídeo;
-* Link para a área "Fale Conosco";
-* Navegação para a página de produtos;
+* Link para a página de produtos;
+* Link para a página **Fale Conosco**;
 * Rodapé.
 
-### 🛍️ Página de produtos
+---
+
+## 🛍️ Página de produtos
 
 Arquivo:
 
@@ -78,11 +108,55 @@ A página de produtos apresenta:
 * Lista ordenada com etapas de compra;
 * Vídeo;
 * Link para retornar à página inicial;
-* Link para a área de contato.
+* Link para a página de contato.
 
 ---
 
-## 📋 Requisitos da Aula 1
+## 📩 Página Fale Conosco
+
+Arquivo:
+
+```text
+contato.html
+```
+
+A terceira página foi desenvolvida na **Aula 2** e possui um formulário destinado ao contato do usuário com a loja.
+
+O formulário contém diferentes elementos HTML5 para coleta de informações.
+
+### Campos implementados
+
+* **Nome**
+* **E-mail**
+* **Telefone**
+* **Data**
+* **Número**
+* **Seleção de opções**
+* **Radio buttons**
+* **Checkboxes**
+* **Mensagem**
+* **Botão de envio**
+
+### Validações HTML5
+
+Foram utilizados recursos nativos do HTML5 para melhorar a validação dos dados preenchidos pelo usuário.
+
+Entre eles:
+
+* `required`
+* `type="email"`
+* `type="tel"`
+* `type="date"`
+* `type="number"`
+* `min`
+* `max`
+* `maxlength`
+
+Esses recursos permitem validar determinadas informações diretamente pelo navegador, sem a necessidade de JavaScript nesta etapa.
+
+---
+
+# 📋 Requisitos da Aula 1
 
 O projeto foi estruturado considerando os elementos solicitados na primeira atividade:
 
@@ -103,47 +177,80 @@ O projeto foi estruturado considerando os elementos solicitados na primeira ativ
 
 ---
 
-## 🧭 Navegação
+# 📋 Requisitos da Aula 2
 
-A estrutura atual possui duas páginas principais:
+Na segunda etapa, novos recursos foram adicionados ao projeto:
 
-```text
-              ┌─────────────────┐
-              │      HOME       │
-              │   index.html    │
-              └────────┬────────┘
-                       │
-                       │ Produtos
-                       ▼
-              ┌─────────────────┐
-              │    PRODUTOS     │
-              │ produtos.html   │
-              └────────┬────────┘
-                       │
-                       │ Voltar
-                       ▼
-              ┌─────────────────┐
-              │      HOME       │
-              └─────────────────┘
-```
-
-Também existe na Home o acesso à seção:
-
-```text
-Fale Conosco
-```
-
-Essa área foi preparada para receber o formulário HTML5 que será desenvolvido na próxima etapa da disciplina.
+| Recurso                       | Status |
+| ----------------------------- | :----: |
+| Terceira página               |    ✅   |
+| Página de contato             |    ✅   |
+| Formulário HTML5              |    ✅   |
+| Campos de texto               |    ✅   |
+| Campo de e-mail               |    ✅   |
+| Campo de telefone             |    ✅   |
+| Campo de data                 |    ✅   |
+| Campo numérico                |    ✅   |
+| Select                        |    ✅   |
+| Radio buttons                 |    ✅   |
+| Checkboxes                    |    ✅   |
+| Textarea                      |    ✅   |
+| Campos obrigatórios           |    ✅   |
+| Validação HTML5               |    ✅   |
+| Limite de caracteres          |    ✅   |
+| Navegação entre três páginas  |    ✅   |
+| Link "Fale Conosco"           |    ✅   |
+| Retorno para a página inicial |    ✅   |
 
 ---
 
-## 📁 Estrutura do projeto
+# 🧭 Navegação
+
+A estrutura atual possui **três páginas principais**:
+
+```text
+                       ┌─────────────────┐
+                       │      HOME       │
+                       │   index.html    │
+                       └───────┬─────────┘
+                               │
+                    ┌──────────┴──────────┐
+                    │                     │
+                    │ Produtos            │ Fale Conosco
+                    ▼                     ▼
+           ┌─────────────────┐    ┌─────────────────┐
+           │    PRODUTOS     │    │     CONTATO     │
+           │ produtos.html   │    │ contato.html    │
+           └────────┬────────┘    └────────┬────────┘
+                    │                     │
+                    │ Voltar              │ Voltar
+                    └──────────┬──────────┘
+                               ▼
+                       ┌─────────────────┐
+                       │      HOME       │
+                       │   index.html    │
+                       └─────────────────┘
+```
+
+A navegação permite que o usuário:
+
+* Acesse a página inicial;
+* Acesse a página de produtos;
+* Acesse a página de contato;
+* Retorne à página inicial;
+* Navegue entre as páginas por meio dos links disponíveis no site.
+
+---
+
+# 📁 Estrutura do projeto
 
 ```text
 vendas-online-html/
+
 │
 ├── index.html
 ├── produtos.html
+├── contato.html
 ├── README.md
 │
 ├── css/
@@ -160,18 +267,35 @@ vendas-online-html/
 
 ---
 
-## 🧩 Organização dos arquivos
+# 🧩 Organização dos arquivos
 
-### HTML
+## HTML
 
 Os arquivos HTML são responsáveis pela estrutura e pelo conteúdo das páginas:
 
 ```text
 index.html
 produtos.html
+contato.html
 ```
 
-### CSS
+Cada arquivo representa uma página diferente do site.
+
+### `index.html`
+
+Página principal da TechStore.
+
+### `produtos.html`
+
+Página responsável pela apresentação do catálogo de produtos.
+
+### `contato.html`
+
+Página desenvolvida na Aula 2, contendo o formulário HTML5 de contato.
+
+---
+
+## CSS
 
 A estilização foi separada dos arquivos HTML seguindo uma organização mais limpa e reutilizável:
 
@@ -179,7 +303,11 @@ A estilização foi separada dos arquivos HTML seguindo uma organização mais l
 css/style.css
 ```
 
-### Imagens
+O arquivo CSS é utilizado para padronizar a aparência das páginas e seus componentes.
+
+---
+
+## Imagens
 
 As imagens utilizadas no projeto ficam armazenadas separadamente:
 
@@ -187,7 +315,9 @@ As imagens utilizadas no projeto ficam armazenadas separadamente:
 imagens/
 ```
 
-### Vídeos
+---
+
+## Vídeos
 
 Os conteúdos de vídeo utilizados pelas páginas ficam organizados em:
 
@@ -197,9 +327,9 @@ videos/
 
 ---
 
-## 🎨 Tecnologias utilizadas
+# 🎨 Tecnologias utilizadas
 
-### HTML5
+## HTML5
 
 Utilizado para construir a estrutura das páginas e aplicar elementos como:
 
@@ -217,8 +347,19 @@ Utilizado para construir a estrutura das páginas e aplicar elementos como:
 * `a`
 * `img`
 * `video`
+* `form`
+* `input`
+* `select`
+* `option`
+* `textarea`
+* `button`
+* `table`
 
-### CSS3
+Também foram utilizados atributos de validação do HTML5 para os campos do formulário.
+
+---
+
+## CSS3
 
 Utilizado para:
 
@@ -228,17 +369,19 @@ Utilizado para:
 * Espaçamentos;
 * Botões;
 * Cards de produtos;
+* Formulário;
+* Tabelas;
 * Responsividade;
 * Efeitos de interação;
 * Organização visual da loja.
 
 ---
 
-## 🛍️ Categoria escolhida
+# 🛍️ Categoria escolhida
 
 O segmento escolhido para o projeto foi:
 
-### 💻 Eletrônicos
+## 💻 Eletrônicos
 
 A loja apresenta inicialmente produtos como:
 
@@ -250,29 +393,35 @@ A quantidade e variedade de produtos poderão aumentar nas próximas etapas do p
 
 ---
 
-## 🛒 Carrinho de compras
+# 🛒 Carrinho de compras
 
 Nesta primeira etapa, o carrinho possui apenas uma representação **visual**.
 
-Os botões de "Adicionar ao carrinho" ainda não realizam operações reais, pois o projeto está sendo desenvolvido inicialmente como um site estático.
+Os botões de **"Adicionar ao carrinho"** ainda não realizam operações reais, pois o projeto está sendo desenvolvido inicialmente como um site estático.
 
 Futuramente, o carrinho poderá receber funcionalidades utilizando JavaScript, banco de dados e uma linguagem de programação no lado do servidor.
 
 ---
 
-## 📩 Fale Conosco
+# 📩 Fale Conosco
 
-A página inicial possui uma área destinada ao contato:
+A página **Fale Conosco** foi implementada como a terceira página do projeto.
 
-```text
-Fale Conosco
-```
+O formulário permite praticar diferentes recursos de formulários HTML5, incluindo:
 
-Nesta primeira etapa, essa área funciona como preparação para a implementação do formulário HTML5 na próxima aula.
+* Entrada de dados;
+* Seleção de opções;
+* Escolha de múltiplas opções;
+* Inserção de mensagens;
+* Validação de campos;
+* Campos obrigatórios;
+* Limitação de caracteres.
+
+Nesta etapa, o formulário possui finalidade acadêmica e de demonstração dos recursos HTML5.
 
 ---
 
-## 🎥 Conteúdo multimídia
+# 🎥 Conteúdo multimídia
 
 O projeto também possui um vídeo relacionado ao tema de tecnologia.
 
@@ -290,7 +439,7 @@ O vídeo é apresentado utilizando o elemento HTML5:
 
 ---
 
-## 📱 Responsividade
+# 📱 Responsividade
 
 O projeto possui uma estrutura CSS preparada para diferentes tamanhos de tela.
 
@@ -303,9 +452,9 @@ Em telas menores, os elementos são reorganizados para melhorar a experiência d
 
 ---
 
-## 🚀 Como executar o projeto
+# 🚀 Como executar o projeto
 
-O projeto não necessita de servidor ou banco de dados nesta primeira etapa.
+O projeto não necessita de servidor ou banco de dados nesta etapa.
 
 ### 1. Clone o repositório
 
@@ -325,7 +474,7 @@ cd vendas-online-html
 code .
 ```
 
-### 4. Abra o arquivo
+### 4. Abra o arquivo principal
 
 ```text
 index.html
@@ -337,13 +486,17 @@ O arquivo pode ser aberto diretamente em um navegador ou utilizando uma extensã
 
 ---
 
-## 🔮 Próximas etapas
+# 🔮 Próximas etapas
 
 O projeto será desenvolvido progressivamente ao longo das próximas aulas.
 
 Entre as possíveis evoluções estão:
 
-* [ ] Criar formulário de contato;
+* [x] Criar homepage;
+* [x] Criar página de produtos;
+* [x] Criar página de contato;
+* [x] Criar formulário HTML5;
+* [x] Implementar navegação entre três páginas;
 * [ ] Criar novas páginas;
 * [ ] Desenvolver página de cadastro;
 * [ ] Criar página de carrinho;
@@ -356,7 +509,7 @@ Entre as possíveis evoluções estão:
 
 ---
 
-## 📈 Evolução planejada
+# 📈 Evolução planejada
 
 A ideia do projeto é evoluir de:
 
@@ -365,7 +518,9 @@ HTML + CSS
      ↓
 Site estático
      ↓
-Novas páginas
+Múltiplas páginas
+     ↓
+Formulários HTML5
      ↓
 JavaScript
      ↓
@@ -378,7 +533,7 @@ Processo de compra
 
 ---
 
-## 🧠 Boas práticas utilizadas
+# 🧠 Boas práticas utilizadas
 
 O projeto busca seguir algumas boas práticas de desenvolvimento:
 
@@ -390,25 +545,27 @@ O projeto busca seguir algumas boas práticas de desenvolvimento:
 * Organização dos recursos multimídia;
 * Nomes de arquivos simples e padronizados;
 * Estrutura preparada para futuras expansões;
-* Código organizado e indentado.
+* Código organizado e indentado;
+* Utilização de validações nativas do HTML5;
+* Separação das páginas por responsabilidade.
 
 ---
 
-## 👩‍💻 Projeto acadêmico
+# 👩‍💻 Projeto acadêmico
 
 **TechStore — Vendas Online**
 
-Projeto desenvolvido individualmente para fins acadêmicos.
+Projeto desenvolvido individualmente para fins acadêmicos, com o objetivo de aplicar conhecimentos de desenvolvimento web utilizando HTML5 e CSS3.
 
-### Status
+### 📌 Status
 
 🟢 **Em desenvolvimento**
 
-> A versão atual corresponde à primeira etapa do projeto e será expandida nas próximas atividades da disciplina.
+> A versão atual corresponde à evolução do projeto até a **Aula 2**, incluindo homepage, página de produtos, página de contato, formulário HTML5 e navegação entre as três páginas.
 
 ---
 
-## 📄 Licença
+# 📄 Licença
 
 Este projeto foi desenvolvido para fins **acadêmicos e educacionais**.
 

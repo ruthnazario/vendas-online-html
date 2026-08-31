@@ -589,3 +589,182 @@ a {
         align-items: flex-start;
     }
 }
+/* =========================================
+   FORMULÁRIO DE CONTATO
+   ========================================= */
+
+.contact-form-section {
+    background-color: #f7f8fc;
+}
+
+.form-container {
+    max-width: 900px;
+}
+
+.contact-form {
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(23, 32, 51, 0.08);
+
+    border: 1px solid #e6e8ee;
+}
+
+
+/* ---------- TABELA ---------- */
+
+.contact-form table {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0 16px;
+}
+
+.contact-form td {
+    vertical-align: top;
+
+    padding: 5px;
+}
+
+
+/* ---------- LABELS ---------- */
+
+.contact-form td:first-child {
+    width: 30%;
+
+    font-weight: 700;
+
+    color: #172033;
+
+    padding-top: 13px;
+}
+
+
+/* ---------- CAMPOS ---------- */
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="date"],
+.contact-form input[type="number"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid
+        #d7dce5;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    background-color: #ffffff;
+
+    color: #172033;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+/* ---------- FOCO ---------- */
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #3157d5;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(49, 87, 213, 0.10);
+}
+
+
+/* ---------- TEXTAREA ---------- */
+
+.contact-form textarea {
+    resize: vertical;
+
+    min-height: 140px;
+}
+
+
+/* ---------- RADIO E CHECKBOX ---------- */
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    width: auto;
+
+    margin-right: 6px;
+}
+
+.contact-form td label:not(:first-child) {
+    margin-left: 15px;
+}
+
+
+/* ---------- BOTÕES ---------- */
+
+.contact-form button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    margin-right: 8px;
+}
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 700px) {
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form table,
+    .contact-form tbody,
+    .contact-form tr,
+    .contact-form td {
+        display: block;
+
+        width: 100%;
+    }
+
+    .contact-form td:first-child {
+        padding-top: 0;
+
+        padding-bottom: 5px;
+    }
+
+    .contact-form td {
+        padding: 5px 0;
+    }
+
+    .contact-form td label:not(:first-child) {
+        margin-left: 0;
+
+        display: inline-block;
+
+        margin-right: 12px;
+
+        margin-top: 8px;
+    }
+
+}

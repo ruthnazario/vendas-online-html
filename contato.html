@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Entre em contato com a TechStore."
+    >
+
+    <title>TechStore | Fale Conosco</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- CABEÇALHO -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                Tech<span>Store</span>
+            </a>
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <nav aria-label="Navegação principal">
+
+                <ul class="menu">
+
+                    <li>
+                        <a href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="produtos.html">
+                            Produtos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="contato.html"
+                            class="active"
+                        >
+                            Fale Conosco
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+
+        <!-- TÍTULO -->
+
+        <section class="page-title">
+
+            <div class="container">
+
+                <p class="tag">
+                    FALE CONOSCO
+                </p>
+
+                <h1>
+                    Entre em contato
+                </h1>
+
+                <p>
+                    Preencha o formulário abaixo para
+                    enviar sua mensagem para a TechStore.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULÁRIO -->
+
+        <section class="section contact-form-section">
+
+            <div class="container form-container">
+
+
+                <div class="section-title">
+
+                    <p class="tag">
+                        FORMULÁRIO
+                    </p>
+
+                    <h2>
+                        Envie sua mensagem
+                    </h2>
+
+                    <p>
+                        Preencha os campos abaixo com
+                        suas informações.
+                    </p>
+
+                </div>
+
+
+                <!-- FORMULÁRIO HTML5 -->
+
+                <form
+                    action="#"
+                    method="post"
+                    class="contact-form"
+                >
+
+
+                    <!-- TABELA PARA ORGANIZAÇÃO DOS CAMPOS -->
+
+                    <table>
+
+                        <tbody>
+
+
+                            <!-- NOME -->
+
+                            <tr>
+
+                                <td>
+                                    <label for="nome">
+                                        Nome completo:
+                                    </label>
+                                </td>
+
+                                <td>
+
+                                    <input
+                                        type="text"
+                                        id="nome"
+                                        name="nome"
+                                        placeholder="Digite seu nome"
+                                        required
+                                        minlength="3"
+                                        maxlength="80"
+                                    >
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- E-MAIL -->
+
+                            <tr>
+
+                                <td>
+                                    <label for="email">
+                                        E-mail:
+                                    </label>
+                                </td>
+
+                                <td>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="exemplo@email.com"
+                                        required
+                                    >
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- TELEFONE -->
+
+                            <tr>
+
+                                <td>
+                                    <label for="telefone">
+                                        Telefone:
+                                    </label>
+                                </td>
+
+                                <td>
+
+                                    <input
+                                        type="tel"
+                                        id="telefone"
+                                        name="telefone"
+                                        placeholder="(11) 99999-9999"
+                                        pattern="[0-9()\-\s]{10,20}"
+                                        required
+                                    >
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- DATA -->
+
+                            <tr>
+
+                                <td>
+                                    <label for="data">
+                                        Data de contato:
+                                    </label>
+                                </td>
+
+                                <td>
+
+                                    <input
+                                        type="date"
+                                        id="data"
+                                        name="data"
+                                        required
+                                    >
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- ASSUNTO -->
+
+                            <tr>
+
+                                <td>
+                                    <label for="assunto">
+                                        Assunto:
+                                    </label>
+                                </td>
+
+                                <td>
+
+                                    <select
+                                        id="assunto"
+                                        name="assunto"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Selecione uma opção
+                                        </option>
+
+                                        <option value="produto">
+                                            Dúvida sobre produto
+                                        </option>
+
+                                        <option value="pedido">
+                                            Dúvida sobre pedido
+                                        </option>
+
+                                        <option value="entrega">
+                                            Entrega
+                                        </option>
+
+                                        <option value="troca">
+                                            Troca ou devolução
+                                        </option>
+
+                                        <option value="outro">
+                                            Outro assunto
+                                        </option>
+
+                                    </select>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PREFERÊNCIA DE CONTATO -->
+
+                            <tr>
+
+                                <td>
+                                    Preferência de contato:
+                                </td>
+
+                                <td>
+
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="preferencia"
+                                            value="email"
+                                            required
+                                        >
+
+                                        E-mail
+                                    </label>
+
+
+                                    <label>
+                                        <input
+                                            type="radio"
+                                            name="preferencia"
+                                            value="telefone"
+                                        >
+
+                                        Telefone
+                                    </label>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- PRODUTO DE INTERESSE -->
+
+                            <tr>
+
+                                <td>
+                                    Produto de interesse:
+                                </td>
+
+                                <td>
+
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            name="produto"
+                                            value="notebook"
+                                        >
+
+                                        Notebook
+                                    </label>
+
+
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            name="produto"
+                                            value="smartphone"
+                                        >
+
+                                        Smartphone
+                                    </label>
+
+
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            name="produto"
+                                            value="fone"
+                                        >
+
+                                        Fone de ouvido
+                                    </label>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- QUANTIDADE -->
+
+                            <tr>
+
+                                <td>
+                                    <label for="quantidade">
+                                        Quantidade:
+                                    </label>
+                                </td>
+
+                                <td>
+
+                                    <input
+                                        type="number"
+                                        id="quantidade"
+                                        name="quantidade"
+                                        min="1"
+                                        max="10"
+                                        value="1"
+                                    >
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- MENSAGEM -->
+
+                            <tr>
+
+                                <td>
+                                    <label for="mensagem">
+                                        Mensagem:
+                                    </label>
+                                </td>
+
+                                <td>
+
+                                    <textarea
+                                        id="mensagem"
+                                        name="mensagem"
+                                        rows="6"
+                                        cols="40"
+                                        placeholder="Digite sua mensagem"
+                                        minlength="10"
+                                        maxlength="500"
+                                        required
+                                    ></textarea>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- ACEITE -->
+
+                            <tr>
+
+                                <td>
+                                    Termos:
+                                </td>
+
+                                <td>
+
+                                    <label>
+
+                                        <input
+                                            type="checkbox"
+                                            name="termos"
+                                            value="aceito"
+                                            required
+                                        >
+
+                                        Concordo com o envio
+                                        das informações.
+
+                                    </label>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- BOTÕES -->
+
+                            <tr>
+
+                                <td></td>
+
+                                <td>
+
+                                    <button
+                                        type="submit"
+                                        class="button button-primary"
+                                    >
+                                        Enviar mensagem
+                                    </button>
+
+
+                                    <button
+                                        type="reset"
+                                        class="button button-secondary"
+                                    >
+                                        Limpar formulário
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <section class="section">
+
+            <div class="container navigation">
+
+                <a
+                    href="index.html"
+                    class="button button-secondary"
+                >
+                    ← Voltar para Home
+                </a>
+
+                <a
+                    href="produtos.html"
+                    class="button button-primary"
+                >
+                    Ver produtos
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <p>
+                &copy; 2026 TechStore -
+                Projeto acadêmico de Vendas Online.
+            </p>
+
+            <a href="index.html">
+                Home
+            </a>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

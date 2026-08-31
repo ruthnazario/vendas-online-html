@@ -1,390 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
-        name="description"
-        content="Catálogo de produtos eletrônicos da TechStore."
-    >
+      name="description"
+      content="Catálogo de produtos eletrônicos da TechStore."
+    />
 
     <title>TechStore | Produtos</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
-
-
-<body>
-
-
+  <body>
     <!-- CABEÇALHO -->
 
     <header class="header">
+      <div class="container header-content">
+        <a href="index.html" class="logo"> Tech<span>Store</span> </a>
 
-        <div class="container header-content">
+        <!-- MENU -->
 
+        <nav aria-label="Navegação principal">
+          <ul class="menu">
+            <li>
+              <a href="index.html"> Início </a>
+            </li>
 
-            <a
-                href="index.html"
-                class="logo"
-            >
-                Tech<span>Store</span>
-            </a>
+            <li>
+              <a href="produtos.html" class="active"> Produtos </a>
+            </li>
 
-
-            <!-- MENU -->
-
-            <nav aria-label="Navegação principal">
-
-                <ul class="menu">
-
-                    <li>
-                        <a href="index.html">
-                            Início
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="produtos.html"
-                            class="active"
-                        >
-                            Produtos
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="index.html#contato">
-                            Fale Conosco
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
+            <li>
+              <a href="index.html#contato"> Fale Conosco </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-
     <main>
+      <!-- TÍTULO DA PÁGINA -->
 
+      <section class="page-title">
+        <div class="container">
+          <p class="tag">CATÁLOGO</p>
 
-        <!-- TÍTULO DA PÁGINA -->
+          <h1>Nossos produtos</h1>
 
-        <section class="page-title">
+          <p>Encontre os eletrônicos ideais para suas necessidades.</p>
+        </div>
+      </section>
 
-            <div class="container">
+      <!-- PRODUTOS -->
 
-                <p class="tag">
-                    CATÁLOGO
-                </p>
+      <section class="section">
+        <div class="container">
+          <div class="products-grid">
+            <!-- NOTEBOOK -->
 
-                <h1>
-                    Nossos produtos
-                </h1>
+            <article class="product-card">
+              <img src="imagens/notebook.jpg" alt="Notebook Pro" />
 
-                <p>
-                    Encontre os eletrônicos ideais
-                    para suas necessidades.
-                </p>
+              <div class="product-content">
+                <p class="category">COMPUTADORES</p>
 
-            </div>
+                <h2>MacBook Neo</h2>
 
-        </section>
+                <p>Notebook para estudos, trabalho e produtividade.</p>
 
+                <strong> R$ 5.499,00 </strong>
 
-        <!-- PRODUTOS -->
+                <a href="#" class="button-small"> Adicionar ao carrinho </a>
+              </div>
+            </article>
 
-        <section class="section">
+            <!-- SMARTPHONE -->
 
-            <div class="container">
+            <article class="product-card">
+              <img src="imagens/smartphone.jpg" alt="Smartphone X" />
 
-                <div class="products-grid">
+              <div class="product-content">
+                <p class="category">CELULARES</p>
 
+                <h2>iPhone 17 pro</h2>
 
-                    <!-- NOTEBOOK -->
+                <p>Desempenho, câmera e conectividade.</p>
 
-                    <article class="product-card">
+                <strong> R$ 7.899,00 </strong>
 
-                        <img
-                            src="imagens/notebook.jpg"
-                            alt="Notebook Pro"
-                        >
+                <a href="#" class="button-small"> Adicionar ao carrinho </a>
+              </div>
+            </article>
 
-                        <div class="product-content">
+            <!-- FONE -->
 
-                            <p class="category">
-                                COMPUTADORES
-                            </p>
+            <article class="product-card">
+              <img src="imagens/fone.jpg" alt="Fone Sound" />
 
-                            <h2>
-                                MacBook Neo
-                            </h2>
+              <div class="product-content">
+                <p class="category">ÁUDIO</p>
 
-                            <p>
-                                Notebook para estudos,
-                                trabalho e produtividade.
-                            </p>
+                <h2>AirPods 4</h2>
 
-                            <strong>
-                                R$ 5.499,00
-                            </strong>
+                <p>Som de qualidade para músicas e chamadas.</p>
 
-                            <a
-                                href="#"
-                                class="button-small"
-                            >
-                                Adicionar ao carrinho
-                            </a>
+                <strong> R$ 1.399,00 </strong>
 
-                        </div>
+                <a href="#" class="button-small"> Adicionar ao carrinho </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-                    </article>
+      <!-- LISTA ORDENADA -->
 
+      <section class="section benefits">
+        <div class="container two-columns">
+          <div>
+            <h2>Como comprar?</h2>
 
-                    <!-- SMARTPHONE -->
+            <p>O carrinho será desenvolvido futuramente.</p>
+          </div>
 
-                    <article class="product-card">
+          <div>
+            <h3>Etapas da compra</h3>
 
-                        <img
-                            src="imagens/smartphone.jpg"
-                            alt="Smartphone X"
-                        >
+            <ol class="list">
+              <li>Escolha um produto.</li>
 
-                        <div class="product-content">
+              <li>Adicione ao carrinho.</li>
 
-                            <p class="category">
-                                CELULARES
-                            </p>
+              <li>Confira seus produtos.</li>
 
-                            <h2>
-                                iPhone 17 pro
-                            </h2>
+              <li>Finalize sua compra.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
 
-                            <p>
-                                Desempenho, câmera e
-                                conectividade.
-                            </p>
-
-                            <strong>
-                                R$ 7.899,00
-                            </strong>
-
-                            <a
-                                href="#"
-                                class="button-small"
-                            >
-                                Adicionar ao carrinho
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- FONE -->
-
-                    <article class="product-card">
-
-                        <img
-                            src="imagens/fone.jpg"
-                            alt="Fone Sound"
-                        >
-
-                        <div class="product-content">
-
-                            <p class="category">
-                                ÁUDIO
-                            </p>
-
-                            <h2>
-                                AirPods 4
-                            </h2>
-
-                            <p>
-                                Som de qualidade para
-                                músicas e chamadas.
-                            </p>
-
-                            <strong>
-                                R$ 1.399,00
-                            </strong>
-
-                            <a
-                                href="#"
-                                class="button-small"
-                            >
-                                Adicionar ao carrinho
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- LISTA ORDENADA -->
-
-        <section class="section benefits">
-
-            <div class="container two-columns">
-
-
-                <div>
-
-                    <h2>
-                        Como comprar?
-                    </h2>
-
-                    <p>
-                        O carrinho será desenvolvido
-                        futuramente.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Etapas da compra
-                    </h3>
-
-                    <ol class="list">
-
-                        <li>
-                            Escolha um produto.
-                        </li>
-
-                        <li>
-                            Adicione ao carrinho.
-                        </li>
-
-                        <li>
-                            Confira seus produtos.
-                        </li>
-
-                        <li>
-                            Finalize sua compra.
-                        </li>
-
-                    </ol>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- VÍDEO -->
-
-        <section class="section video-section">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <p class="tag">
-                        MULTIMÍDIA
-                    </p>
-
-                    <h2>
-                        Conteúdo sobre tecnologia
-                    </h2>
-
-                </div>
-
-
-                <div class="video-container">
-
-                    <video controls>
-
-                        <source
-                            src="videos/video-tecnologia.mp4"
-                            type="video/mp4"
-                        >
-
-                        Seu navegador não suporta
-                        a reprodução de vídeo.
-
-                    </video>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- NAVEGAÇÃO -->
-
-        <section class="section">
-
-            <div class="container navigation">
-
-
-                <a
-                    href="index.html"
-                    class="button button-secondary"
-                >
-                    ← Voltar para Home
-                </a>
-
-
-                <a
-                    href="index.html#contato"
-                    class="button button-primary"
-                >
-                    Fale Conosco
-                </a>
-
-            </div>
-
-        </section>
-
-
+      <!-- VÍDEO -->
+
+      <section class="section video-section">
+        <div class="container">
+          <div class="section-title">
+            <p class="tag">MULTIMÍDIA</p>
+
+            <h2>Conteúdo sobre tecnologia</h2>
+          </div>
+
+          <div class="video-container">
+            <video controls>
+              <source src="videos/video-tecnologia.mp4" type="video/mp4" />
+
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- NAVEGAÇÃO -->
+
+      <section class="section">
+        <div class="container navigation">
+          <a href="index.html" class="button button-secondary">
+            ← Voltar para Home
+          </a>
+
+          <a href="contato.html" class="button button-primary">
+            Fale Conosco
+          </a>
+        </div>
+      </section>
     </main>
-
 
     <!-- RODAPÉ -->
 
     <footer class="footer">
+      <div class="container footer-content">
+        <p>&copy; 2026 TechStore - Projeto acadêmico de Vendas Online.</p>
 
-        <div class="container footer-content">
-
-            <p>
-                &copy; 2026 TechStore -
-                Projeto acadêmico de Vendas Online.
-            </p>
-
-            <a href="index.html">
-                Home
-            </a>
-
-        </div>
-
+        <a href="index.html"> Home </a>
+      </div>
     </footer>
-
-
-</body>
-
+  </body>
 </html>
