@@ -204,6 +204,46 @@ Na segunda etapa, novos recursos foram adicionados ao projeto:
 
 ---
 
+# 📋 Aplicando Conhecimento — Aula 4
+
+Nesta etapa, as três páginas do site foram atualizadas para aplicar os
+conhecimentos de posicionamento e imagens de fundo utilizando exclusivamente a
+folha de estilo externa.
+
+## Alterações realizadas
+
+* ✅ Mantidas as três páginas HTML5: `index.html`, `produtos.html` e `contato.html`;
+* ✅ Mantido o CSS externo em `css/style.css`;
+* ✅ Aplicado `background` no `body` com a imagem `imagens/smartphone.jpg`;
+* ✅ Aplicado `background` no banner da página inicial com `imagens/notebook.jpg`;
+* ✅ Aplicado `background` nos títulos internos com `imagens/fone.jpg`;
+* ✅ Aplicado `position: sticky` no cabeçalho para manter o menu visível;
+* ✅ Aplicado `position: relative` nos principais blocos do layout;
+* ✅ Aplicado `position: absolute` nos elementos decorativos e identificadores visuais;
+* ✅ Mantida a organização responsiva para telas menores;
+* ✅ Mantidos os recursos HTML5 do formulário e suas validações;
+* ✅ Mantidos o vídeo e as imagens utilizados nas páginas;
+* ✅ Corrigido o link **Fale Conosco** do menu de produtos;
+* ✅ O link **Fale Conosco** agora abre diretamente `contato.html`, sem enviar o usuário para uma âncora no final da página inicial;
+* ✅ Mantidos os links de ida e volta entre Home, Produtos e Contato.
+
+## Requisitos da Aula 4
+
+| Requisito | Status |
+| --- | :---: |
+| Três páginas HTML5 | ✅ |
+| Folha de estilo CSS externa | ✅ |
+| Uso da propriedade `position` | ✅ |
+| Uso da propriedade `background` | ✅ |
+| Imagens de fundo nas páginas | ✅ |
+| Navegação entre as três páginas | ✅ |
+| Link **Fale Conosco** direto para `contato.html` | ✅ |
+| Formulário HTML5 | ✅ |
+| Imagens e vídeo incluídos | ✅ |
+| Layout responsivo | ✅ |
+
+---
+
 # 🧭 Navegação
 
 A estrutura atual possui **três páginas principais**:
