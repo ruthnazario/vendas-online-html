@@ -10,7 +10,7 @@ A **TechStore** é uma proposta de loja virtual especializada em **eletrônicos*
 
 O projeto tem como objetivo aplicar, de forma prática e progressiva, os conhecimentos adquiridos durante as aulas, começando pela construção da estrutura HTML e evoluindo posteriormente para novas páginas, recursos e funcionalidades.
 
-O site conta com **três páginas**: página inicial, catálogo de produtos e uma página de contato ("Fale Conosco"), contendo um **formulário HTML5** com diferentes tipos de campos e recursos de validação. Nas etapas mais recentes, o layout também recebeu posicionamento de elementos e imagens de fundo via CSS.
+O site conta com **três páginas**: página inicial, catálogo de produtos e uma página de contato ("Fale Conosco"), contendo um **formulário HTML5** com diferentes tipos de campos e recursos de validação. Nas etapas mais recentes, o layout recebeu posicionamento de elementos e imagens de fundo via CSS e, na Aula 5, o **design responsivo para celular (480 px)** na página inicial.
 
 > 🚧 O projeto continuará sendo desenvolvido e aprimorado ao longo das próximas aulas.
 
@@ -30,6 +30,7 @@ A proposta contempla elementos comuns em plataformas de comércio eletrônico, c
 - Formulário HTML5
 - Imagens dos produtos
 - Conteúdo multimídia
+- Design responsivo
 - Estrutura preparada para futuras funcionalidades
 
 ---
@@ -156,6 +157,44 @@ Esses recursos permitem validar as informações preenchidas pelo usuário diret
 | Imagens e vídeo incluídos | ✅ |
 | Layout responsivo | ✅ |
 
+### Aula 5
+
+| Requisito | Status |
+| --- | :---: |
+| Homepage com design responsivo para 480 px (celular) | ✅ |
+| Uso de media query (`@media (max-width: 480px)`) | ✅ |
+| Propriedades aplicadas somente em CSS (sem atributos de estilo no HTML) | ✅ |
+| Meta viewport configurada no `<head>` | ✅ |
+| Layout de desktop preservado fora da media query | ✅ |
+| Entrega somente da homepage (`index.html`) | ✅ |
+
+---
+
+## 🆕 Alterações da Aula 5
+
+Nesta etapa, a **homepage** (`index.html`) recebeu o design responsivo para a largura de **480 px**, utilizando exclusivamente a folha de estilo externa `css/style.css`.
+
+* ✅ Adicionado o bloco `@media (max-width: 480px)` ao final do `style.css`, após os breakpoints já existentes (800 px e 700 px)
+* ✅ Mantida a meta tag `viewport` (`width=device-width, initial-scale=1.0`) no `<head>`
+* ✅ **Cabeçalho:** logo e menu centralizados, cabeçalho sem `sticky` no celular para liberar espaço de tela
+* ✅ **Banner principal:** texto centralizado, título e espaçamentos reduzidos, imagem ajustada ao card
+* ✅ **Botões:** empilhados em coluna e em largura total, facilitando o toque
+* ✅ **Produtos em destaque:** cards em coluna única, com altura de imagem reduzida
+* ✅ **Benefícios e vídeo:** espaçamentos e margens ajustados para telas pequenas
+* ✅ **Fale Conosco:** conteúdo centralizado e link transformado em botão azul em largura total
+* ✅ **Rodapé:** conteúdo centralizado
+* ✅ Fundo fixo (`background-attachment: fixed`) substituído por `scroll` no celular, evitando travamentos
+* ✅ Nenhuma alteração no HTML: todo o ajuste foi feito via CSS
+* ✅ Framework não utilizado: a solução foi feita com media query em CSS puro
+
+**Pontos de quebra (breakpoints) do projeto:**
+
+| Largura máxima | Uso |
+|---|---|
+| `800px` | Tablets: menu em coluna, banner e grids em coluna única |
+| `700px` | Formulário de contato em coluna única |
+| `480px` | **Celular:** ajustes de tipografia, espaçamento, botões e cards (Aula 5) |
+
 ---
 
 ## 🆕 Alterações da Aula 4
@@ -212,6 +251,8 @@ A navegação permite que o usuário acesse a página inicial, a página de prod
 ---
 
 ## 📁 Estrutura do projeto
+
+```text
 vendas-online-html/
 │
 ├── index.html
@@ -220,15 +261,16 @@ vendas-online-html/
 ├── README.md
 │
 ├── css/
-│ └── style.css
+│   └── style.css
 │
 ├── imagens/
-│ ├── notebook.jpg
-│ ├── smartphone.jpg
-│ └── fone.jpg
+│   ├── notebook.jpg
+│   ├── smartphone.jpg
+│   └── fone.jpg
 │
 └── videos/
-└── video-tecnologia.mp4
+    └── video-tecnologia.mp4
+```
 
 ---
 
@@ -236,11 +278,11 @@ vendas-online-html/
 
 ### HTML5
 
-Utilizado para construir a estrutura das páginas, com elementos como `header`, `nav`, `main`, `section`, `article`, `footer`, `h1`–`h3`, `p`, `ul`, `ol`, `li`, `a`, `img`, `video`, `form`, `input`, `select`, `option`, `textarea`, `button` e `table`, além dos atributos nativos de validação do HTML5 nos campos do formulário.
+Utilizado para construir a estrutura das páginas, com elementos como `header`, `nav`, `main`, `section`, `article`, `footer`, `h1`–`h3`, `p`, `ul`, `ol`, `li`, `a`, `img`, `video`, `form`, `input`, `select`, `option`, `textarea`, `button` e `table`, além dos atributos nativos de validação do HTML5 nos campos do formulário e da meta tag `viewport` para o design responsivo.
 
 ### CSS3
 
-Utilizado para organização do layout, cores, tipografia, espaçamentos, botões, cards de produtos, estilização do formulário, tabelas, responsividade, posicionamento (`position`), imagens de fundo (`background`) e efeitos de interação.
+Utilizado para organização do layout, cores, tipografia, espaçamentos, botões, cards de produtos, estilização do formulário, tabelas, **design responsivo com media queries**, posicionamento (`position`), imagens de fundo (`background`), Flexbox, Grid e efeitos de interação.
 
 ---
 
@@ -270,7 +312,13 @@ O projeto conta com um vídeo relacionado ao tema de tecnologia, organizado em `
 
 ## 📱 Responsividade
 
-O projeto possui uma estrutura CSS preparada para diferentes tamanhos de tela, reorganizando os elementos em telas menores para melhorar a experiência em smartphones, tablets, notebooks e desktops.
+O projeto utiliza **media queries** no arquivo `css/style.css` para adaptar o layout a diferentes tamanhos de tela:
+
+- **Desktop:** menu à direita do logo, banner em duas colunas e cards de produtos em três colunas
+- **Tablet (até 800 px):** menu em coluna, banner e seções em coluna única
+- **Celular (até 480 px):** layout em coluna única, conteúdo centralizado, botões em largura total, tipografia e espaçamentos reduzidos
+
+Na **Aula 5**, o design responsivo para 480 px foi aplicado na **homepage**. Para testar, abra o `index.html` no Chrome, pressione **F12**, ative o modo dispositivo e defina a largura em **480 px**.
 
 ---
 
@@ -302,6 +350,8 @@ code .
 - [x] Criar formulário HTML5
 - [x] Implementar navegação entre três páginas
 - [x] Aplicar `position` e `background` no CSS
+- [x] Aplicar design responsivo (480 px) na homepage
+- [ ] Estender o design responsivo para `produtos.html` e `contato.html`
 - [ ] Criar novas páginas
 - [ ] Desenvolver página de cadastro
 - [ ] Criar página de carrinho
@@ -311,8 +361,6 @@ code .
 - [ ] Implementar banco de dados
 - [ ] Desenvolver processo de compra
 - [ ] Transformar o projeto estático em uma aplicação dinâmica
-
-**Evolução planejada:**
 
 ---
 
@@ -329,6 +377,7 @@ code .
 - Código organizado e indentado
 - Utilização de validações nativas do HTML5
 - Separação das páginas por responsabilidade
+- Design responsivo com media queries e abordagem somente em CSS
 
 ---
 
@@ -338,7 +387,7 @@ code .
 
 Projeto desenvolvido individualmente para fins acadêmicos, com o objetivo de aplicar conhecimentos de desenvolvimento web utilizando HTML5 e CSS3.
 
-**Status:** 🟢 Em desenvolvimento — a versão atual corresponde à evolução até a **Aula 4**, incluindo homepage, página de produtos, página de contato com formulário HTML5, navegação entre as três páginas, posicionamento de elementos via `position` e imagens de fundo via `background`.
+**Status:** 🟢 Em desenvolvimento — a versão atual corresponde à evolução até a **Aula 5**, incluindo homepage, página de produtos, página de contato com formulário HTML5, navegação entre as três páginas, posicionamento de elementos via `position`, imagens de fundo via `background` e design responsivo para 480 px na homepage.
 
 ---
 
