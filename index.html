@@ -13,6 +13,9 @@
     <title>TechStore | Vendas Online</title>
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JAVASCRIPT EXTERNO (Aula 6) -->
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -99,57 +102,9 @@
             <p>Confira alguns dos produtos disponíveis em nossa loja.</p>
           </div>
 
-          <!-- CARDS DOS PRODUTOS -->
+          <!-- CARDS DOS PRODUTOS (gerados pelo script.js) -->
 
-          <div class="products-grid">
-            <!-- PRODUTO 1 -->
-
-            <article class="product-card">
-              <img src="imagens/notebook.jpg" alt="Notebook moderno" />
-
-              <div class="product-content">
-                <h3>MacBook Neo</h3>
-
-                <p>Ideal para estudos, trabalho e produtividade.</p>
-
-                <strong> R$ 5.499,00 </strong>
-
-                <a href="produtos.html"> Ver produto </a>
-              </div>
-            </article>
-
-            <!-- PRODUTO 2 -->
-
-            <article class="product-card">
-              <img src="imagens/smartphone.jpg" alt="Smartphone moderno" />
-
-              <div class="product-content">
-                <h3>iPhone 17 pro</h3>
-
-                <p>Tecnologia, desempenho e praticidade para o seu dia.</p>
-
-                <strong> R$ 7.899,00 </strong>
-
-                <a href="produtos.html"> Ver produto </a>
-              </div>
-            </article>
-
-            <!-- PRODUTO 3 -->
-
-            <article class="product-card">
-              <img src="imagens/fone.jpg" alt="Fone de ouvido moderno" />
-
-              <div class="product-content">
-                <h3>AirPods 4</h3>
-
-                <p>Som de qualidade para músicas, vídeos e chamadas.</p>
-
-                <strong> R$ 1.399,00 </strong>
-
-                <a href="produtos.html"> Ver produto </a>
-              </div>
-            </article>
-          </div>
+          <div class="products-grid" id="lista-produtos"></div>
         </div>
       </section>
 
@@ -171,17 +126,8 @@
           <div>
             <h3>Confira nossos benefícios</h3>
 
-            <ul class="list">
-              <li>Produtos de qualidade</li>
-
-              <li>Variedade de eletrônicos</li>
-
-              <li>Compra rápida e prática</li>
-
-              <li>Navegação simples</li>
-
-              <li>Atendimento ao cliente</li>
-            </ul>
+            <!-- ITENS GERADOS PELO script.js -->
+            <ul class="list" id="lista-beneficios"></ul>
           </div>
         </div>
       </section>
@@ -234,7 +180,7 @@
 
     <footer class="footer">
       <div class="container footer-content">
-        <p>&copy; 2026 TechStore - Projeto acadêmico de Vendas Online.</p>
+        <p>&copy; <span id="ano-atual">2026</span> TechStore - Projeto acadêmico de Vendas Online.</p>
 
         <a href="index.html"> Voltar ao início </a>
       </div>

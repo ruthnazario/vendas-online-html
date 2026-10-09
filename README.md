@@ -1,6 +1,6 @@
 # 🛒 TechStore — Vendas Online
 
-> Projeto acadêmico de desenvolvimento web com foco na criação de um site estático de **Vendas Online**, desenvolvido com HTML5 e CSS3.
+> Projeto acadêmico de desenvolvimento web com foco na criação de um site de **Vendas Online**, desenvolvido com HTML5, CSS3 e JavaScript.
 
 ---
 
@@ -10,7 +10,7 @@ A **TechStore** é uma proposta de loja virtual especializada em **eletrônicos*
 
 O projeto tem como objetivo aplicar, de forma prática e progressiva, os conhecimentos adquiridos durante as aulas, começando pela construção da estrutura HTML e evoluindo posteriormente para novas páginas, recursos e funcionalidades.
 
-O site conta com **três páginas**: página inicial, catálogo de produtos e uma página de contato ("Fale Conosco"), contendo um **formulário HTML5** com diferentes tipos de campos e recursos de validação. Nas etapas mais recentes, o layout recebeu posicionamento de elementos e imagens de fundo via CSS e, na Aula 5, o **design responsivo para celular (480 px)** na página inicial.
+O site conta com **três páginas**: página inicial, catálogo de produtos e uma página de contato ("Fale Conosco"), contendo um **formulário HTML5** com diferentes tipos de campos e recursos de validação. Nas etapas mais recentes, o layout recebeu posicionamento de elementos e imagens de fundo via CSS, o **design responsivo para celular (480 px)** na página inicial (Aula 5) e, na Aula 6, os **dados em JavaScript** apresentados na homepage.
 
 > 🚧 O projeto continuará sendo desenvolvido e aprimorado ao longo das próximas aulas.
 
@@ -31,6 +31,7 @@ A proposta contempla elementos comuns em plataformas de comércio eletrônico, c
 - Imagens dos produtos
 - Conteúdo multimídia
 - Design responsivo
+- Dados dinâmicos com JavaScript
 - Estrutura preparada para futuras funcionalidades
 
 ---
@@ -45,12 +46,12 @@ A página inicial apresenta:
 - Menu de navegação
 - Apresentação da loja
 - Banner principal
-- Produtos em destaque
-- Lista de benefícios
+- Produtos em destaque (dados e cards gerados por JavaScript)
+- Lista de benefícios (itens gerados por JavaScript)
 - Vídeo institucional
 - Link para a página de produtos
 - Link para a página Fale Conosco
-- Rodapé
+- Rodapé (com o ano atual gerado por JavaScript)
 
 ### 🛍️ Página de produtos — `produtos.html`
 
@@ -168,6 +169,45 @@ Esses recursos permitem validar as informações preenchidas pelo usuário diret
 | Layout de desktop preservado fora da media query | ✅ |
 | Entrega somente da homepage (`index.html`) | ✅ |
 
+### Aula 6
+
+| Requisito | Status |
+| --- | :---: |
+| Dados em JavaScript apresentados na **homepage** | ✅ |
+| JavaScript do tipo **externo** (arquivo `script.js`) | ✅ |
+| Arquivo `.js` entregue junto com os arquivos `.html` | ✅ |
+| Arquivo `.js` ligado ao HTML com `<script src="script.js" defer>` | ✅ |
+| Layout e responsividade da homepage preservados | ✅ |
+
+---
+
+## 🆕 Alterações da Aula 6
+
+Nesta etapa, a **homepage** (`index.html`) passou a apresentar dados em JavaScript, usando um arquivo externo, o `script.js`, na mesma pasta do HTML.
+
+* ✅ Criado o arquivo externo `script.js`
+* ✅ Adicionada a linha `<script src="script.js" defer></script>` no `<head>` do `index.html`
+* ✅ **Produtos em destaque:** os dados (nome, descrição, preço, imagem) ficam em um array de objetos (`produtos`) e os cards são gerados na `<div id="lista-produtos">`
+* ✅ **Benefícios:** os textos ficam em um array (`beneficios`) e os itens `<li>` são gerados na `<ul id="lista-beneficios">`
+* ✅ **Preços:** formatados em reais (R$) com `toLocaleString("pt-BR")`
+* ✅ **Rodapé:** o ano atual é inserido automaticamente em `<span id="ano-atual">`
+* ✅ Os cards gerados mantêm as mesmas classes CSS (`product-card`, `product-content`), preservando o visual e o design responsivo
+* ✅ O código roda após o carregamento da página (`DOMContentLoaded`)
+* ✅ Ajuste de texto: nome do produto padronizado como "iPhone 17 Pro"
+
+**Recursos de JavaScript utilizados:**
+
+| Recurso | Uso no projeto |
+|---|---|
+| `const` e arrays de objetos | Armazenar os dados dos produtos e dos benefícios |
+| Funções | `formatarPreco`, `mostrarProdutos`, `mostrarBeneficios`, `mostrarAno` |
+| `forEach` e `map` | Percorrer os arrays para montar o HTML |
+| Template literals (crase) | Montar os cards com os dados de cada produto |
+| `document.getElementById` | Localizar os elementos da página |
+| `innerHTML` e `textContent` | Inserir o conteúdo na página |
+| `addEventListener` | Executar o código quando a página carregar |
+| `Date` | Obter o ano atual |
+
 ---
 
 ## 🆕 Alterações da Aula 5
@@ -258,6 +298,7 @@ vendas-online-html/
 ├── index.html
 ├── produtos.html
 ├── contato.html
+├── script.js
 ├── README.md
 │
 ├── css/
@@ -284,6 +325,10 @@ Utilizado para construir a estrutura das páginas, com elementos como `header`, 
 
 Utilizado para organização do layout, cores, tipografia, espaçamentos, botões, cards de produtos, estilização do formulário, tabelas, **design responsivo com media queries**, posicionamento (`position`), imagens de fundo (`background`), Flexbox, Grid e efeitos de interação.
 
+### JavaScript
+
+Utilizado em um **arquivo externo** (`script.js`) para guardar os dados dos produtos e dos benefícios em arrays e apresentá-los dinamicamente na homepage, além de formatar os preços em reais e inserir o ano atual no rodapé.
+
 ---
 
 ## 🛍️ Categoria escolhida
@@ -294,7 +339,7 @@ Utilizado para organização do layout, cores, tipografia, espaçamentos, botõe
 
 ## 🛒 Carrinho de compras
 
-Nesta etapa, o carrinho possui apenas uma representação **visual**. Os botões de "Adicionar ao carrinho" ainda não realizam operações reais, já que o projeto é, por enquanto, um site estático. Futuramente, o carrinho poderá receber funcionalidades reais com JavaScript, banco de dados e uma linguagem de back-end.
+Nesta etapa, o carrinho possui apenas uma representação **visual**. Os botões de "Adicionar ao carrinho" ainda não realizam operações reais. Futuramente, o carrinho poderá receber funcionalidades reais com JavaScript, banco de dados e uma linguagem de back-end.
 
 ---
 
@@ -340,6 +385,8 @@ code .
 # ou utilize a extensão Live Server no VS Code
 ```
 
+> ⚠️ Mantenha o `script.js` na mesma pasta do `index.html`. Se ele estiver em outro lugar, os produtos e os benefícios não aparecerão na homepage.
+
 ---
 
 ## 🔮 Próximas etapas
@@ -351,12 +398,13 @@ code .
 - [x] Implementar navegação entre três páginas
 - [x] Aplicar `position` e `background` no CSS
 - [x] Aplicar design responsivo (480 px) na homepage
+- [x] Apresentar dados em JavaScript na homepage
 - [ ] Estender o design responsivo para `produtos.html` e `contato.html`
 - [ ] Criar novas páginas
 - [ ] Desenvolver página de cadastro
 - [ ] Criar página de carrinho
 - [ ] Melhorar catálogo de produtos
-- [ ] Implementar interações com JavaScript
+- [ ] Implementar mais interações com JavaScript (carrinho, validação do formulário)
 - [ ] Criar sistema de cadastro
 - [ ] Implementar banco de dados
 - [ ] Desenvolver processo de compra
@@ -366,7 +414,7 @@ code .
 
 ## 🧠 Boas práticas utilizadas
 
-- Separação entre HTML e CSS
+- Separação entre HTML, CSS e JavaScript
 - Organização dos arquivos em pastas
 - Uso de HTML5 semântico
 - Utilização de `alt` nas imagens
@@ -374,10 +422,11 @@ code .
 - Organização dos recursos multimídia
 - Nomes de arquivos simples e padronizados
 - Estrutura preparada para futuras expansões
-- Código organizado e indentado
+- Código organizado, indentado e comentado
 - Utilização de validações nativas do HTML5
 - Separação das páginas por responsabilidade
 - Design responsivo com media queries e abordagem somente em CSS
+- JavaScript externo, com dados separados da parte que os exibe
 
 ---
 
@@ -385,9 +434,9 @@ code .
 
 **TechStore — Vendas Online**
 
-Projeto desenvolvido individualmente para fins acadêmicos, com o objetivo de aplicar conhecimentos de desenvolvimento web utilizando HTML5 e CSS3.
+Projeto desenvolvido individualmente para fins acadêmicos, com o objetivo de aplicar conhecimentos de desenvolvimento web utilizando HTML5, CSS3 e JavaScript.
 
-**Status:** 🟢 Em desenvolvimento — a versão atual corresponde à evolução até a **Aula 5**, incluindo homepage, página de produtos, página de contato com formulário HTML5, navegação entre as três páginas, posicionamento de elementos via `position`, imagens de fundo via `background` e design responsivo para 480 px na homepage.
+**Status:** 🟢 Em desenvolvimento — a versão atual corresponde à evolução até a **Aula 6**, incluindo homepage, página de produtos, página de contato com formulário HTML5, navegação entre as três páginas, posicionamento de elementos via `position`, imagens de fundo via `background`, design responsivo para 480 px na homepage e dados em JavaScript externo apresentados na homepage.
 
 ---
 
