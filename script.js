@@ -92,3 +92,33 @@ document.addEventListener("DOMContentLoaded", function () {
   mostrarBeneficios();
   mostrarAno();
 });
+
+// Aula 8 - Saudação com caixa de diálogo ao carregar a homepage
+function saudacao() {
+  var agora = new Date();
+  var hora = agora.getHours();
+  var diasDaSemana = [
+    "domingo", "segunda-feira", "terça-feira",
+    "quarta-feira", "quinta-feira", "sexta-feira", "sábado"
+  ];
+
+  var periodo;
+  if (hora >= 5 && hora < 12) {
+    periodo = "Bom dia!";
+  } else if (hora >= 12 && hora < 18) {
+    periodo = "Boa tarde!";
+  } else {
+    periodo = "Boa noite!";
+  }
+
+  alert(
+    "Sou Ruth Nazario\n" +
+    "SP/ADS-MACK\n" +
+    periodo + " Hoje é " + diasDaSemana[agora.getDay()]
+  );
+}
+window.addEventListener("load", function () {
+  if (document.getElementById("lista-produtos")) {
+    saudacao();
+  }
+});

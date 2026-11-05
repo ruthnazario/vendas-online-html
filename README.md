@@ -10,8 +10,10 @@ A **TechStore** é uma proposta de loja virtual especializada em **eletrônicos*
 
 O projeto tem como objetivo aplicar, de forma prática e progressiva, os conhecimentos adquiridos durante as aulas, começando pela construção da estrutura HTML e evoluindo posteriormente para novas páginas, recursos e funcionalidades.
 
-O site conta com **três páginas**: página inicial, catálogo de produtos e uma página de contato ("Fale Conosco"), contendo um **formulário HTML5** com diferentes tipos de campos e recursos de validação. Nas etapas mais recentes, o layout recebeu posicionamento de elementos e imagens de fundo via CSS, o **design responsivo para celular (480 px)** na página inicial (Aula 5) e, na Aula 6, os **dados em JavaScript** apresentados na homepage.
+O site conta com **três páginas**: página inicial, catálogo de produtos e uma página de contato ("Fale Conosco"), contendo um **formulário HTML5** com diferentes tipos de campos e recursos de validação. Nas etapas mais recentes, o layout recebeu posicionamento de elementos e imagens de fundo via CSS, o **design responsivo para celular (480 px)** na página inicial (Aula 5), os **dados em JavaScript** apresentados na homepage (Aula 6) e, na Aula 8, a **saudação ao usuário com caixa de diálogo** ao carregar a homepage, usando um evento do JavaScript.
 
+> ✅ A **Aula 8** foi concluída neste semestre.
+>
 > 🚧 O projeto continuará sendo desenvolvido e aprimorado ao longo das próximas aulas.
 
 ---
@@ -32,6 +34,7 @@ A proposta contempla elementos comuns em plataformas de comércio eletrônico, c
 - Conteúdo multimídia
 - Design responsivo
 - Dados dinâmicos com JavaScript
+- Saudação ao usuário com caixa de diálogo (evento do JavaScript)
 - Estrutura preparada para futuras funcionalidades
 
 ---
@@ -44,6 +47,7 @@ A página inicial apresenta:
 
 - Identidade visual da TechStore
 - Menu de navegação
+- **Saudação em caixa de diálogo ao abrir a página (nome, cidade/curso/universidade, período do dia e dia da semana)**
 - Apresentação da loja
 - Banner principal
 - Produtos em destaque (dados e cards gerados por JavaScript)
@@ -178,6 +182,91 @@ Esses recursos permitem validar as informações preenchidas pelo usuário diret
 | Arquivo `.js` entregue junto com os arquivos `.html` | ✅ |
 | Arquivo `.js` ligado ao HTML com `<script src="script.js" defer>` | ✅ |
 | Layout e responsividade da homepage preservados | ✅ |
+
+### Aula 8
+
+| Requisito | Status |
+| --- | :---: |
+| Saudação ao usuário com **caixa de diálogo** (`alert`) na homepage | ✅ |
+| Uso de **evento do JavaScript** (carregamento da página) | ✅ |
+| Linha 1: nome completo | ✅ |
+| Linha 2: cidade/curso e nome da universidade | ✅ |
+| Linha 3: "Bom dia!", "Boa tarde!" ou "Boa noite!" conforme a hora + "Hoje é" + dia da semana | ✅ |
+| Cada informação da caixa de diálogo em uma linha (`\n`) | ✅ |
+| JavaScript do tipo **externo** (`script.js`) entregue com os `.html`, `.css` e imagens | ✅ |
+| Propriedades de estilo somente em CSS (sem atributos de estilo no HTML) | ✅ |
+| Arquivos anteriores mantidos (sem apagar nada) | ✅ |
+| Atividade concluída neste semestre | ✅ |
+
+---
+
+## 🆕 Alterações da Aula 8
+
+Nesta etapa, a **homepage** (`index.html`) passou a exibir uma **saudação ao usuário em uma caixa de diálogo** assim que a página é carregada pelo navegador. A funcionalidade foi adicionada ao mesmo arquivo externo `script.js`, sem alterar o HTML nem o CSS.
+
+* ✅ Criada a função `saudacao()` no final do `script.js`
+* ✅ A função usa o objeto `Date` para obter a **hora** (`getHours()`) e o **dia da semana** (`getDay()`)
+* ✅ Um array com os nomes dos dias da semana (`domingo` a `sábado`) converte o número do dia em texto
+* ✅ Uma estrutura `if / else if / else` define o período do dia:
+  * das 5h às 11h59: **Bom dia!**
+  * das 12h às 17h59: **Boa tarde!**
+  * das 18h às 4h59: **Boa noite!**
+* ✅ A caixa de diálogo (`alert`) mostra **três linhas**, separadas com `\n`:
+  1. Nome completo
+  2. Cidade/curso e nome da universidade
+  3. Saudação do período + "Hoje é" + dia da semana
+* ✅ A função é chamada pelo **evento `load`** da janela (`window.addEventListener("load", saudacao)`), ou seja, quando a página termina de carregar
+* ✅ Código separado dos dados dos produtos: a saudação não interfere em `mostrarProdutos`, `mostrarBeneficios` e `mostrarAno`
+* ✅ Nenhuma alteração no layout nem na responsividade da homepage
+
+**Exemplo do resultado na caixa de diálogo:**
+
+```text
+Ruth Nazario
+São Paulo/ADS - Universidade Presbiteriana Mackenzie
+Boa noite! Hoje é quinta-feira
+```
+
+**Trecho principal do código (`script.js`):**
+
+```javascript
+function saudacao() {
+  var agora = new Date();
+  var hora = agora.getHours();
+  var diasDaSemana = [
+    "domingo", "segunda-feira", "terça-feira",
+    "quarta-feira", "quinta-feira", "sexta-feira", "sábado"
+  ];
+
+  var periodo;
+  if (hora >= 5 && hora < 12) {
+    periodo = "Bom dia!";
+  } else if (hora >= 12 && hora < 18) {
+    periodo = "Boa tarde!";
+  } else {
+    periodo = "Boa noite!";
+  }
+
+  alert(
+    "Ruth Nazario\n" +
+    "São Paulo/ADS - Universidade Presbiteriana Mackenzie\n" +
+    periodo + " Hoje é " + diasDaSemana[agora.getDay()]
+  );
+}
+window.addEventListener("load", saudacao);
+```
+
+**Recursos de JavaScript utilizados:**
+
+| Recurso | Uso no projeto |
+|---|---|
+| `Date`, `getHours()` e `getDay()` | Obter a hora e o dia da semana atuais |
+| Array | Guardar os nomes dos dias da semana |
+| `if / else if / else` | Escolher entre "Bom dia!", "Boa tarde!" e "Boa noite!" |
+| `alert()` | Exibir a caixa de diálogo de saudação |
+| `\n` | Separar cada informação em uma linha da caixa |
+| Concatenação de textos (`+`) | Montar a mensagem completa |
+| `addEventListener("load", ...)` | Executar a saudação quando a página carregar |
 
 ---
 
@@ -327,7 +416,7 @@ Utilizado para organização do layout, cores, tipografia, espaçamentos, botõe
 
 ### JavaScript
 
-Utilizado em um **arquivo externo** (`script.js`) para guardar os dados dos produtos e dos benefícios em arrays e apresentá-los dinamicamente na homepage, além de formatar os preços em reais e inserir o ano atual no rodapé.
+Utilizado em um **arquivo externo** (`script.js`) para guardar os dados dos produtos e dos benefícios em arrays e apresentá-los dinamicamente na homepage, formatar os preços em reais, inserir o ano atual no rodapé e, a partir da Aula 8, **exibir uma saudação em caixa de diálogo** (com período do dia e dia da semana) quando a página é carregada.
 
 ---
 
@@ -385,7 +474,9 @@ code .
 # ou utilize a extensão Live Server no VS Code
 ```
 
-> ⚠️ Mantenha o `script.js` na mesma pasta do `index.html`. Se ele estiver em outro lugar, os produtos e os benefícios não aparecerão na homepage.
+> ⚠️ Mantenha o `script.js` na mesma pasta do `index.html`. Se ele estiver em outro lugar, os produtos e os benefícios não aparecerão na homepage e a saudação da Aula 8 não será exibida.
+
+> 💡 Ao abrir a homepage, a caixa de diálogo aparece logo após o carregamento. Clique em **Fechar/OK** para continuar navegando.
 
 ---
 
@@ -399,6 +490,7 @@ code .
 - [x] Aplicar `position` e `background` no CSS
 - [x] Aplicar design responsivo (480 px) na homepage
 - [x] Apresentar dados em JavaScript na homepage
+- [x] Exibir saudação em caixa de diálogo ao carregar a homepage (Aula 8)
 - [ ] Estender o design responsivo para `produtos.html` e `contato.html`
 - [ ] Criar novas páginas
 - [ ] Desenvolver página de cadastro
@@ -427,6 +519,7 @@ code .
 - Separação das páginas por responsabilidade
 - Design responsivo com media queries e abordagem somente em CSS
 - JavaScript externo, com dados separados da parte que os exibe
+- Eventos do JavaScript para executar ações quando a página carrega
 
 ---
 
@@ -436,7 +529,7 @@ code .
 
 Projeto desenvolvido individualmente para fins acadêmicos, com o objetivo de aplicar conhecimentos de desenvolvimento web utilizando HTML5, CSS3 e JavaScript.
 
-**Status:** 🟢 Em desenvolvimento — a versão atual corresponde à evolução até a **Aula 6**, incluindo homepage, página de produtos, página de contato com formulário HTML5, navegação entre as três páginas, posicionamento de elementos via `position`, imagens de fundo via `background`, design responsivo para 480 px na homepage e dados em JavaScript externo apresentados na homepage.
+**Status:** 🟢 Em desenvolvimento — a versão atual corresponde à evolução até a **Aula 8 (concluída neste semestre)**, incluindo homepage, página de produtos, página de contato com formulário HTML5, navegação entre as três páginas, posicionamento de elementos via `position`, imagens de fundo via `background`, design responsivo para 480 px na homepage, dados em JavaScript externo apresentados na homepage e saudação em caixa de diálogo ao carregar a página.
 
 ---
 
